@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import User from "./components/User";
 import Dash from "./components/Dash";
+import Calendar from "./components/Calendar";
 
 class App extends Component {
   render() {
@@ -12,10 +12,10 @@ class App extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-xs-5 title-container">
-                  <User/>
+                  <Dash />
                 </div>
                 <div className="col-xs-7 form-container">
-                  <Dash />
+                  <Calendar/>
                 </div>
               </div>
             </div>
