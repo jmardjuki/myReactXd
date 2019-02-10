@@ -229,3 +229,12 @@ main {
         flex-basis: calc(100%/7);
         width: calc(100%/7);
     }
+    .dot {
+      height: 20px;
+      width: 20px;
+      background-color: #ffb3bd;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }

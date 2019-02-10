@@ -1,6 +1,9 @@
 import React from "react";
 import dateFns from "date-fns";
 
+const myData = "Mon Feb 11 2019 00:00:00 GMT-0800 (Pacific Standard Time)"
+const myMessage = "Endoscopy appointment"
+
 class Calendar extends React.Component {
     //by default use today's date
     state = {
@@ -74,6 +77,7 @@ class Calendar extends React.Component {
                         onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
                     >
                         <span className="number">{formattedDate}</span>
+                        { (day == myData) && <span className="dot"></span>}
                         <span className="bg">{formattedDate}</span>
                     </div>
                 );
@@ -91,6 +95,9 @@ class Calendar extends React.Component {
     //select the date with the onclick event, defined
     onDateClick = day => {
         this.setState({selectedDate: day}); 
+        if ( day == myData ) {
+            alert(myMessage)
+        }
     }
     nextMonth = () => {
         this.setState({ currentMonth: dateFns.subMonths(this.state.currentMonth, 1) });
